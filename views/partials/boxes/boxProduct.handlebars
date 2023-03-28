@@ -1,0 +1,16 @@
+<div class="box-product">
+    <img src={{this.thumbnail}} alt="imagen del producto">
+    <div class="info">
+        <h3 class="title">{{this.name}}</h3>
+        <p>${{this.price}}</p>
+        <div class="buttons">
+            {{#if this.stock}}
+            <a href="/products/detail/{{this.code}}" class="btn-secundary">Ver más</a>
+            <a href="/api/cart/add/{{this.code}}" class="btn-buy">Comprar</a>
+            {{else}}
+            <button class="btn-secundary">Ver más</button>
+            <p class="btn-disable"> Not available</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
